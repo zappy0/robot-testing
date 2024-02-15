@@ -14,6 +14,5 @@ Test 0
 
 Test 1
     ${price}=  getDetails
-    Log To Console  ${price}
     ${res}=  sum  ${price}  ${2}
     Log To Console    ${res}

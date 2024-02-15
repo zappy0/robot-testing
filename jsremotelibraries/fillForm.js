@@ -33,9 +33,15 @@ fillForm = async () =>{
 }
 
 lib.getDetails = async()=>{
-  fillForm().then(res=>res).catch(e=>console.log(e));
+  try {
+    const result = await fillForm();
+    console.log(result);
+    return result;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 if (!module.parent) {
-    const server = new robot.Server([lib], { host: 'localhost', port: 8270 });
+    const server = new robot.Server([lib], { host: 'localhost', port: 8270, timeout: 10000 });
 }
