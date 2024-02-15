@@ -14,4 +14,47 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.robotframework</groupId>
+            <artifactId>robotframework</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.robotframework</groupId>
+            <artifactId>javalib-core</artifactId>
+            <version>1.0.3</version>
+        </dependency>
+
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.robotframework</groupId>
+                <artifactId>robotframework-maven-plugin</artifactId>
+                <version>1.4.3</version>
+                <configuration>
+                    <libdoc/>
+                    <testdoc>
+                        <dataSourceFile>src/robot/${testSuite}</dataSourceFile>
+                    </testdoc>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals><goal>run</goal></goals>
+                        <configuration>
+                            <testCasesDirectory>src/robot/${testSuite}</testCasesDirectory>
+                            <extraPathDirectories>
+                                <extraPathDirectory>src/main/java/org/zappy</extraPathDirectory>
+                            </extraPathDirectories>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
