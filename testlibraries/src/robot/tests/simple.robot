@@ -9,7 +9,11 @@ ${PORT}    8270
 *** Test Cases ***
 
 Test 0
-    ${res} =  sum  ${1}  ${2}
+    ${res}=  sum  ${1}  ${2}
+    Log To Console    ${res}
 
 Test 1
-    fillForm
+    ${price}=  getDetails
+    Log To Console  ${price}
+    ${res}=  sum  ${price}  ${2}
+    Log To Console    ${res}
