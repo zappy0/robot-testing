@@ -1,0 +1,18 @@
+Problem Statement 1
+
+Problem Definition
+The current testing process involves execution of test cases locally, creation of cycles under versions in Jira, and organizing issues into folders, updating test status for these cases and adding evidence, a time-consuming task that takes approximately 3-4 hours per release cycle.
+
+Call to Action
+Adopting a more efficient and scalable approach to test case execution and Jira management is crucial.
+Leveraging automation techniques and integrating with existing tools and frameworks can streamline workflows.
+Solution
+Sub problem 1
+Utilizing robotframework listener interface
+Listener interface provides methods for events like start, end of tests and suites (rough: explain the directory structure here along with flow charts) 
+(rough: explain the other approach as well requiring init.robot, difficulties working with robotframework-maven-plugin i.e not enough documentation)
+
+Sub problem 2
+
+
+
